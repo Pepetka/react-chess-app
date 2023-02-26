@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.App {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.game {
+	display: flex;
+	width: 100vw;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.board {
+	width: calc(64px * 8);
+	height: calc(64px * 8);
+	display: flex;
+	flex-wrap: wrap;
+	border-block: 3px solid black;
+}
+
+.cell {
+	width: 64px;
+	height: 64px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.black {
+	background: deepskyblue;
+}
+
+.white {
+	background: #b7a98d;
+}
+
+.figure {
+	height: 70%;
+	position: relative;
+}
+
+.selected {
+	background: brown;
+}
+
+.available {
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	background: lightgreen;
+}
+
+.attacked {
+	background: #945353;
+
+	&:after {
+		content: "";
+		position: absolute;
+		height: 12px;
+		width: 12px;
+		border-radius: 50%;
+		background: red;
+	}
+}
+
+.figures {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 10px;
+	background: gray;
+	height: calc(64px * 8 - 20px);
+	width: 100px;
+	padding: 10px;
+	align-items: center;
+	border: 3px solid black;
+}
+
+.figuresItem {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 100%;
+	gap: 20px;
+
+	img {
+		height: 30px;
+	}
+}
